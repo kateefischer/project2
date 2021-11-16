@@ -1,4 +1,5 @@
 import pygame
+from PIL import Image
 
 pygame.init() #initalizes pygame
 
@@ -6,9 +7,6 @@ screen = pygame.display.set_mode(( 800, 600 )) #creates screen 800 pixels wide, 
 
 #Title and icon
 pygame.display.set_caption("Guess Who?")
-
-#images
-
 
 # Game loop
 running = True
@@ -18,4 +16,6 @@ while running:
             running = False
     screen.fill((102, 178, 255)) #background RBG colors
     pygame.display.update() #updates the screen
+
+#images
 
