@@ -1,71 +1,60 @@
-# import pygame module in this program
-import pygame
+from PIL import Image
 
-# activate the pygame library .
-# initiate pygame and give permission
-# to use pygame's functionality.
-pygame.init()
+new_im = Image.new('RGB', (400,400)) #creates a new empty image, RGB mode, and size 400 by 400.
+#opens an image:
+im1 = Image.open('Alex.png')
+im2 = Image.open('Aneesh.png')
+im3 = Image.open('Annabel.png')
+im4 = Image.open('Dashiell.png')
+im5 = Image.open('Ellie.png')
+im6 = Image.open('Evie.png')
+im7 = Image.open('Grant.png')
+im8 = Image.open('Hudson.png')
+im9 = Image.open('Jack.png')
+im10 = Image.open('Jonas.png')
+im11 = Image.open('Kate.png')
+im12 = Image.open('Kayla.png')
+im13 = Image.open('Mina.png')
+im14 = Image.open('Sam.png')
+im15 = Image.open('Will.png')
+im16 = Image.open('Yumn.png')
+#Here I resize my opened image, so it is no bigger than 100,100
+im1.thumbnail((100,100))
+im2.thumbnail((100,100))
+im3.thumbnail((100,100))
+im4.thumbnail((100,100))
+im5.thumbnail((100,100))
+im6.thumbnail((100,100))
+im7.thumbnail((100,100))
+im8.thumbnail((100,100))
+im9.thumbnail((100,100))
+im10.thumbnail((100,100))
+im11.thumbnail((100,100))
+im12.thumbnail((100,100))
+im13.thumbnail((100,100))
+im14.thumbnail((100,100))
+im15.thumbnail((100,100))
+im16.thumbnail((100,100))
 
-# define the RGB value
-# for white colour
-white = (255, 255, 255)
+#Iterate through a 4 by 4 grid with 100 spacing, to place my image
+new_im.paste(im1, (0,0))
+new_im.paste(im2, (100,0))
+new_im.paste(im3, (200,0))
+new_im.paste(im4, (300,0))
+new_im.paste(im5, (0,100))
+new_im.paste(im6, (100,100))
+new_im.paste(im7, (200,100))
+new_im.paste(im8, (300,100))
+new_im.paste(im9, (0,200))
+new_im.paste(im10, (100,200))
+new_im.paste(im11, (200,200))
+new_im.paste(im12, (300,200))
+new_im.paste(im13, (0,300))
+new_im.paste(im14, (100,300))
+new_im.paste(im15, (200,300))
+new_im.paste(im16, (300,300))
 
-# assigning values to X and Y variable
-X = 1600
-Y = 800
-
-# create the display surface object
-# of specific dimension..e(X, Y).
-display_surface = pygame.display.set_mode((X, Y))
-
-# set the pygame window name
-pygame.display.set_caption('Image')
-
-# create a surface object, image is drawn on it.
-image1 = pygame.image.load('Ellie.png')
-image2 = pygame.image.load('Yumn.png')
-image3 = pygame.image.load('Grant.png')
-image4 = pygame.image.load('Aneesh.png')
-image5 = pygame.image.load('Annabel.png')
-image6 = pygame.image.load('Kate.png')
-image7 = pygame.image.load('Jonas.png')
-image8 = pygame.image.load('Kayla.png')
-# infinite loop
-while True:
-
-    # completely fill the surface object
-    # with white colour
-    display_surface.fill(white)
-
-    # copying the image surface object
-    # to the display surface object at
-    # (0, 0) coordinate.
-    display_surface.blit(image1, (0, 0))
-    display_surface.blit(image2, (400, 0))
-    display_surface.blit(image3, (800, 0))
-    display_surface.blit(image4, (1200, 0))
-    display_surface.blit(image5, (0, 400))
-    display_surface.blit(image6, (400, 400))
-    display_surface.blit(image7, (800, 400))
-    display_surface.blit(image8, (1200, 400))
-
-    # iterate over the list of Event objects
-    # that was returned by pygame.event.get() method.
-
-    for event in pygame.event.get():
-
-        # if event object type is QUIT
-        # then quitting the pygame
-        # and program both.
-        if event.type == pygame.QUIT:
-            # deactivates the pygame library
-            pygame.quit()
-
-            # quit the program.
-            quit()
-
-        # Draws the surface object to the screen.
-        pygame.display.update()
+new_im.show()
 
 
 
