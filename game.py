@@ -8,7 +8,8 @@ def pilImageToSurface(pilImage):
         pilImage.tobytes(), pilImage.size, pilImage.mode).convert()
 
 pygame.init()
-window = pygame.display.set_mode((800, 800))
+window = pygame.display.set_mode((1000, 800))
+pygame.display.set_caption("Guess Who?")
 clock = pygame.time.Clock()
 
 pygameSurface = pilImageToSurface(startGrid)
