@@ -2,23 +2,7 @@ from PIL import Image
 from resizeImages import im1,im2,im3,im4,im5,im6,im7,im8,im9,im10,im11,im12,im13,im14,im15,im16
 startGrid = Image.new('RGB', (725,725)) #creates a new empty image, RGB mode, and size 400 by 400.
 
-#if true it means they have not yet been eliminated
-Alex = True
-Aneesh = True
-Annabel = True
-Dashiell = True
-Ellie = True
-Evie = True
-Grant = True
-Hudson = True
-Jack = True
-Jonas = True
-Kate = True
-Kayla = True
-Mina = True
-Sam = True
-Will = True
-Yumn = True
+
 
 #Iterate through a 4 by 4 grid with 100 spacing, to place my image
 if Alex == True :
