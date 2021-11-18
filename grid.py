@@ -1,6 +1,6 @@
 from PIL import Image
 
-new_im = Image.new('RGB', (725,725)) #creates a new empty image, RGB mode, and size 400 by 400.
+startGrid = Image.new('RGB', (725,725)) #creates a new empty image, RGB mode, and size 400 by 400.
 #opens an image:
 im1 = Image.open('Alex.png')
 im2 = Image.open('Aneesh.png')
@@ -37,24 +37,22 @@ im15.thumbnail((150,150))
 im16.thumbnail((150,150))
 
 #Iterate through a 4 by 4 grid with 100 spacing, to place my image
-new_im.paste(im1, (25,25))
-new_im.paste(im2, (200,25))
-new_im.paste(im3, (375,25))
-new_im.paste(im4, (550,25))
-new_im.paste(im5, (25,200))
-new_im.paste(im6, (200,200))
-new_im.paste(im7, (375,200))
-new_im.paste(im8, (550,200))
-new_im.paste(im9, (25,375))
-new_im.paste(im10, (200,375))
-new_im.paste(im11, (375,375))
-new_im.paste(im12, (550,375))
-new_im.paste(im13, (25,550))
-new_im.paste(im14, (200,550))
-new_im.paste(im15, (375,550))
-new_im.paste(im16, (550,550))
-
-new_im.show()
-
+startGrid.paste(im1, (25,25))
+startGrid.paste(im2, (200,25))
+startGrid.paste(im3, (375,25))
+startGrid.paste(im4, (550,25))
+startGrid.paste(im5, (25,200))
+startGrid.paste(im6, (200,200))
+startGrid.paste(im7, (375,200))
+startGrid.paste(im8, (550,200))
+startGrid.paste(im9, (25,375))
+startGrid.paste(im10, (200,375))
+startGrid.paste(im11, (375,375))
+startGrid.paste(im12, (550,375))
+startGrid.paste(im13, (25,550))
+startGrid.paste(im14, (200,550))
+startGrid.paste(im15, (375,550))
+startGrid.paste(im16, (550,550))
+startGrid.save("finalgrid.png")
 
 

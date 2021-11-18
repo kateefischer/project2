@@ -1,21 +1,25 @@
+from grid import startGrid
 import pygame
-from PIL import Image
 
-pygame.init() #initalizes pygame
+pygame.init()
 
-screen = pygame.display.set_mode(( 800, 600 )) #creates screen 800 pixels wide, 600 pixels long
+def pilImageToSurface(pilImage):
+    return pygame.image.fromstring(
+        pilImage.tobytes(), pilImage.size, pilImage.mode).convert()
 
-#Title and icon
-pygame.display.set_caption("Guess Who?")
+pygame.init()
+window = pygame.display.set_mode((800, 800))
+clock = pygame.time.Clock()
 
-# Game loop
-running = True
-while running:
+pygameSurface = pilImageToSurface(startGrid)
+
+run = True
+while run:
+    clock.tick(60)
     for event in pygame.event.get():
-        if event.type == pygame.QUIT: #if close button is pressed, quit the game
-            running = False
-    screen.fill((102, 178, 255)) #background RBG colors
-    pygame.display.update() #updates the screen
+        if event.type == pygame.QUIT:
+            run = False
 
-#images
-
+    window.fill(0)
+    window.blit(pygameSurface, pygameSurface.get_rect(center = (400, 400)))
+    pygame.display.flip()
