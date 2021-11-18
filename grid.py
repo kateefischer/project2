@@ -1,58 +1,58 @@
 from PIL import Image
-
+from resizeImages import im1,im2,im3,im4,im5,im6,im7,im8,im9,im10,im11,im12,im13,im14,im15,im16
 startGrid = Image.new('RGB', (725,725)) #creates a new empty image, RGB mode, and size 400 by 400.
-#opens an image:
-im1 = Image.open('Alex.png')
-im2 = Image.open('Aneesh.png')
-im3 = Image.open('Annabel.png')
-im4 = Image.open('Dashiell.png')
-im5 = Image.open('Ellie.png')
-im6 = Image.open('Evie.png')
-im7 = Image.open('Grant.png')
-im8 = Image.open('Hudson.png')
-im9 = Image.open('Jack.png')
-im10 = Image.open('Jonas.png')
-im11 = Image.open('Kate.png')
-im12 = Image.open('Kayla.png')
-im13 = Image.open('Mina.png')
-im14 = Image.open('Sam.png')
-im15 = Image.open('Will.png')
-im16 = Image.open('Yumn.png')
-#Here I resize my opened image, so it is no bigger than 100,100
-im1.thumbnail((150,150))
-im2.thumbnail((150,150))
-im3.thumbnail((150,150))
-im4.thumbnail((150,150))
-im5.thumbnail((150,150))
-im6.thumbnail((150,150))
-im7.thumbnail((150,150))
-im8.thumbnail((150,150))
-im9.thumbnail((150,150))
-im10.thumbnail((150,150))
-im11.thumbnail((150,150))
-im12.thumbnail((150,150))
-im13.thumbnail((150,150))
-im14.thumbnail((150,150))
-im15.thumbnail((150,150))
-im16.thumbnail((150,150))
+
+#if true it means they have not yet been eliminated
+Alex = True
+Aneesh = True
+Annabel = True
+Dashiell = True
+Ellie = True
+Evie = True
+Grant = True
+Hudson = True
+Jack = True
+Jonas = True
+Kate = True
+Kayla = True
+Mina = True
+Sam = True
+Will = True
+Yumn = True
 
 #Iterate through a 4 by 4 grid with 100 spacing, to place my image
-startGrid.paste(im1, (25,25))
-startGrid.paste(im2, (200,25))
-startGrid.paste(im3, (375,25))
-startGrid.paste(im4, (550,25))
-startGrid.paste(im5, (25,200))
-startGrid.paste(im6, (200,200))
-startGrid.paste(im7, (375,200))
-startGrid.paste(im8, (550,200))
-startGrid.paste(im9, (25,375))
-startGrid.paste(im10, (200,375))
-startGrid.paste(im11, (375,375))
-startGrid.paste(im12, (550,375))
-startGrid.paste(im13, (25,550))
-startGrid.paste(im14, (200,550))
-startGrid.paste(im15, (375,550))
-startGrid.paste(im16, (550,550))
+if Alex == True :
+    startGrid.paste(im1, (25,25))
+if Aneesh == True:
+    startGrid.paste(im2, (200,25))
+if Annabel == True :
+    startGrid.paste(im3, (375,25))
+if Dashiell == True :
+    startGrid.paste(im4, (550,25))
+if Ellie == True :
+    startGrid.paste(im5, (25,200))
+if Evie == True :
+    startGrid.paste(im6, (200,200))
+if Grant == True :
+    startGrid.paste(im7, (375,200))
+if Hudson == True :
+    startGrid.paste(im8, (550,200))
+if Jack == True :
+    startGrid.paste(im9, (25,375))
+if Jonas == True :
+    startGrid.paste(im10, (200,375))
+if Kate == True :
+    startGrid.paste(im11, (375,375))
+if Kayla == True :
+    startGrid.paste(im12, (550,375))
+if Mina == True :
+    startGrid.paste(im13, (25,550))
+if Sam == True :
+    startGrid.paste(im14, (200,550))
+if Will == True :
+    startGrid.paste(im15, (375,550))
+if Yumn == True :
+    startGrid.paste(im16, (550,550))
 startGrid.save("finalgrid.png")
 
 
