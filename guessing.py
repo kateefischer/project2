@@ -18,7 +18,7 @@ Sam = True
 Will = True
 Yumn = True
 
-def guessChecker(list)
+def guessChecker(list):
     for x in list:
         if "Alex" in x:
             Alex is False
