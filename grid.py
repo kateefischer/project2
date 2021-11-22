@@ -1,8 +1,8 @@
 from PIL import Image
 from resizeImages import im1,im2,im3,im4,im5,im6,im7,im8,im9,im10,im11,im12,im13,im14,im15,im16
+from guessing import Alex, Aneesh, Annabel, Dashiell, Ellie, Evie, Grant, Hudson, Jack, Jonas, Kate, Kayla, Mina, Sam, Will, Yumn
+
 startGrid = Image.new('RGB', (725,725)) #creates a new empty image, RGB mode, and size 400 by 400.
-
-
 
 #Iterate through a 4 by 4 grid with 100 spacing, to place my image
 if Alex == True :
@@ -38,5 +38,7 @@ if Will == True :
 if Yumn == True :
     startGrid.paste(im16, (550,550))
 startGrid.save("finalgrid.png")
+
+
 
 

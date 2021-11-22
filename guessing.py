@@ -18,37 +18,59 @@ Sam = True
 Will = True
 Yumn = True
 
+fullBoard = ["Alex", "Aneesh", "Annabel", "Dashiell", "Ellie", "Evie", "Grant", "Hudson", "Jack", "Jonas", "Kate", "Kayla", "Mina", "Sam", "Will", "Yumn"]
+girls = ["Evie","Ellie","Annabel","Kate","Kayla","Mina"]
+
 def guessChecker(list):
-    for x in list:
-        if "Alex" in x:
-            Alex is False
-        if "Aneesh" in x:
-            Aneesh is False
-        if "Annabel" in x:
-            Annabel is False
-        if "Dashiell" in x:
-            Dashiell is False
-        if "Ellie" in x:
-            Ellie is False
-        if "Evie" in x:
-            Evie is False
-        if "Grant" in x:
-            Grant is False
-        if "Hudson" in x:
-            Hudson is False
-        if "Jack" in x:
-            Jack is False
-        if "Jonas" in x:
-            Jonas is False
-        if "Kate" in x:
-            Kate is False
-        if "Kayla" in x:
-            Kayla is False
-        if "Mina" in x:
-            Mina is False
-        if "Sam" in x:
-            Sam is False
-        if "Will" in x:
-            Will is False
-        if "Yumn" in x:
-            Yumn is False
+    if "Alex" in list:
+        global Alex
+        Alex = False
+    if "Aneesh" in list:
+        global Aneesh
+        Aneesh = False
+    if "Annabel" in list:
+        print("In the list")
+        global Annabel
+        Annabel = False
+    if "Dashiell" in list:
+        global Dashiell
+        Dashiell = False
+    if "Ellie" in list:
+        global Ellie
+        Ellie = False
+    if "Evie" in list:
+        global Evie
+        Evie = False
+    if "Grant" in list:
+        global Grant
+        Grant = False
+    if "Hudson" in list:
+        global Hudson
+        Hudson = False
+    if "Jack" in list:
+        global Jack
+        Jack = False
+    if "Jonas" in list:
+        global Jonas
+        Jonas = False
+    if "Kate" in list:
+        global Kate
+        Kate = False
+    if "Kayla" in list:
+        global Kayla
+        Kayla = False
+    if "Mina" in list:
+        global Mina
+        Mina = False
+    if "Sam" in list:
+        global Sam
+        Sam = False
+    if "Will" in list:
+        global Will
+        Will = False
+    if "Yumn" in list:
+        global Yumn
+        Yumn = False
+    print("ran")
+
+guessChecker(girls)
