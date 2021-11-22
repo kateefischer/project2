@@ -20,6 +20,16 @@ Yumn = True
 
 fullBoard = ["Alex", "Aneesh", "Annabel", "Dashiell", "Ellie", "Evie", "Grant", "Hudson", "Jack", "Jonas", "Kate", "Kayla", "Mina", "Sam", "Will", "Yumn"]
 girls = ["Evie","Ellie","Annabel","Kate","Kayla","Mina"]
+boys = ["Alex", "Aneesh", "Dashiell", "Grant", "Hudson", "Jack", "Jonas", "Sam", "Will", "Yumn"]
+red = ["Hudson", "Dashiell", "Annabel", "Jonas"]
+blue = ["Grant", "Aneesh"]
+black = []
+grey = []
+tan = []
+white = []
+purple = []
+mint = []
+
 
 def guessChecker(list):
     if "Alex" in list:
@@ -73,4 +83,4 @@ def guessChecker(list):
         Yumn = False
     print("ran")
 
-guessChecker(girls)
+
