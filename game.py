@@ -2,12 +2,10 @@ from grid import startGrid
 import pygame
 
 pygame.init()
-
 def pilImageToSurface(pilImage):
     return pygame.image.fromstring(
         pilImage.tobytes(), pilImage.size, pilImage.mode).convert()
 
-pygame.init()
 window = pygame.display.set_mode((1000, 800))
 pygame.display.set_caption("Guess Who?")
 clock = pygame.time.Clock()
@@ -24,3 +22,5 @@ while run:
     window.fill(0)
     window.blit(pygameSurface, pygameSurface.get_rect(center = (400, 400)))
     pygame.display.flip()
+
+
