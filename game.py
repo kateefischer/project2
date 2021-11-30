@@ -11,7 +11,6 @@ def pilImageToSurface(pilImage):
 pygame.init()
 window = pygame.display.set_mode((1200, 800))
 pygame.display.set_caption("Guess Who?")
-clock = pygame.time.Clock()
 
 pygameSurface = pilImageToSurface(startGrid)
 
@@ -25,16 +24,16 @@ list1 = DropDown(
     [COLOR_LIST_INACTIVE, COLOR_LIST_ACTIVE],
     800, 50, 200, 50,
     pygame.font.SysFont(None, 30),
-    "Select Mode", ["Calibration", "Test"])
+    "Questions", ["Calibration", "Test"])
 
 
 run = True
 while run:
-    clock.tick(60)
     event_list = pygame.event.get()
     for event in event_list:
         if event.type == pygame.QUIT:
             run = False
+
     selected_option = list1.update(event_list)
     if selected_option >= 0:
         list1.main = list1.options[selected_option]

@@ -22,13 +22,21 @@ fullBoard = ["Alex", "Aneesh", "Annabel", "Dashiell", "Ellie", "Evie", "Grant", 
 girls = ["Evie","Ellie","Annabel","Kate","Kayla","Mina"]
 boys = ["Alex", "Aneesh", "Dashiell", "Grant", "Hudson", "Jack", "Jonas", "Sam", "Will", "Yumn"]
 red = ["Hudson", "Dashiell", "Annabel", "Jonas"]
-blue = ["Grant", "Aneesh"]
-black = []
-grey = []
-tan = []
-white = []
-purple = []
-mint = []
+blue = ["Grant", "Aneesh", "Will"]
+black = ["Alex", "Ellie", "Kate"]
+gray = ["Jack"]
+tan = ["Sam"]
+white = ["Evie"]
+purple = ["Mina"]
+mint = ["Kayla", "Yumn"]
+noTeeth = ["Sam", "Will"]
+teeth = ["Alex", "Aneesh", "Annabel", "Dashiell", "Ellie", "Evie", "Grant", "Hudson", "Jack", "Jonas", "Kate", "Kayla", "Mina", "Yumn"]
+brownHair = ["Jack", "Hudson", "Dashiell", "Alex", "Grant", "Evie", "Mina", "Ellie", "Will", "Jonas"]
+blackHair = ["Annabel", "Aneesh", "Yumn"]
+blondeHair = ["Kate", "Kayla", "Sam"]
+curlyHair = ["Evie", "Mina", "Yumn"]
+
+
 
 
 def guessChecker(list):
@@ -81,6 +89,5 @@ def guessChecker(list):
     if "Yumn" in list:
         global Yumn
         Yumn = False
-    print("ran")
 
 
