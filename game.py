@@ -1,18 +1,17 @@
-from grid import startGrid
-from dropdown import DropDown
+from grid import makeGrid
 import pygame
-
+import dropdown
+from dropdown import DropDown
+import guessing
 pygame.init()
-
 def pilImageToSurface(pilImage):
     return pygame.image.fromstring(
         pilImage.tobytes(), pilImage.size, pilImage.mode).convert()
 
-pygame.init()
-window = pygame.display.set_mode((1200, 800))
+window = pygame.display.set_mode((1000, 800))
 pygame.display.set_caption("Guess Who?")
 
-pygameSurface = pilImageToSurface(startGrid)
+pygameSurface = pilImageToSurface(makeGrid())
 
 COLOR_INACTIVE = (100, 80, 255)
 COLOR_ACTIVE = (100, 200, 255)
@@ -37,10 +36,16 @@ while run:
     selected_option = list1.update(event_list)
     if selected_option >= 0:
         list1.main = list1.options[selected_option]
+        if selected_option == 0:
+            guessing.guessChecker(guessing.girls)
+            pygameSurface = pilImageToSurface(makeGrid())
+
+
 
     window.fill((255, 255, 255))
     list1.draw(window)
-
-
+    pygame.display.update()
     window.blit(pygameSurface, pygameSurface.get_rect(center = (400, 400)))
     pygame.display.flip()
+
+

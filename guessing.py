@@ -47,7 +47,6 @@ def guessChecker(list):
         global Aneesh
         Aneesh = False
     if "Annabel" in list:
-        print("In the list")
         global Annabel
         Annabel = False
     if "Dashiell" in list:
