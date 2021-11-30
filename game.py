@@ -3,7 +3,13 @@ import pygame
 import dropdown
 from dropdown import DropDown
 import guessing
+import random
 pygame.init()
+
+guessWhoList = ["Alex", "Aneesh", "Annabel", "Dashiell", "Ellie", "Evie", "Grant", "Hudson", "Jack", "Jonas", "Kate", "Kayla", "Mina", "Sam", "Will", "Yumn"]
+guessWho = guessWhoList[random.randint(0,16)]
+print(guessWho)
+
 def pilImageToSurface(pilImage):
     return pygame.image.fromstring(
         pilImage.tobytes(), pilImage.size, pilImage.mode).convert()
@@ -37,7 +43,16 @@ while run:
     if selected_option >= 0:
         list1.main = list1.options[selected_option]
         if selected_option == 0:
-            guessing.guessChecker(guessing.girls)
+            if (guessWho in guessing.girls):
+                guessing.guessChecker(guessing.boys)
+            else:
+                guessing.guessChecker(guessing.girls)
+            pygameSurface = pilImageToSurface(makeGrid())
+        if selected_option == 1:
+            if (guessWho in guessing.noTeeth):
+                guessing.guessChecker(guessing.teeth)
+            else:
+                guessing.guessChecker(guessing.noTeeth)
             pygameSurface = pilImageToSurface(makeGrid())
 
 
@@ -46,5 +61,3 @@ while run:
     list1.draw(window)
     window.blit(pygameSurface, pygameSurface.get_rect(center = (400, 400)))
     pygame.display.flip()
-
-
