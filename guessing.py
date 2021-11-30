@@ -24,7 +24,7 @@ boys = ["Alex", "Aneesh", "Dashiell", "Grant", "Hudson", "Jack", "Jonas", "Sam",
 red = ["Hudson", "Dashiell", "Annabel", "Jonas"]
 blue = ["Grant", "Aneesh", "Will"]
 black = ["Alex", "Ellie", "Kate"]
-gray = ["Jack"]
+grey = ["Jack"]
 tan = ["Sam"]
 white = ["Evie"]
 purple = ["Mina"]
@@ -88,6 +88,5 @@ def guessChecker(list):
     if "Yumn" in list:
         global Yumn
         Yumn = False
-    print(Alex,Mina,Sam)
 
 

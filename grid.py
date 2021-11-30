@@ -10,12 +10,10 @@ def makeGrid():
     #Iterate through a 4 by 4 grid with 100 spacing, to place my image
     if guessing.Alex == True :
         startGrid.paste(im1, (25,25))
-        print("yes")
     if guessing.Aneesh == True:
         startGrid.paste(im2, (200,25))
     if guessing.Annabel == True :
         startGrid.paste(im3, (375,25))
-        print("yes")
     if guessing.Dashiell == True :
         startGrid.paste(im4, (550,25))
     if guessing.Ellie == True :
@@ -44,6 +42,42 @@ def makeGrid():
         startGrid.paste(im16, (550,550))
     startGrid.save("finalgrid.png")
     return startGrid
+
+def numTrue():
+    num = 0
+    if guessing.Alex == True :
+        num=num+1
+    if guessing.Aneesh == True:
+        num=num+1
+    if guessing.Annabel == True :
+        num = num + 1
+    if guessing.Dashiell == True :
+        num=num+1
+    if guessing.Ellie == True :
+        num=num+1
+    if guessing.Evie == True :
+        num=num+1
+    if guessing.Grant == True :
+        num = num + 1
+    if guessing.Hudson == True :
+        num=num+1
+    if guessing.Jack == True :
+        num=num+1
+    if guessing.Jonas == True :
+        num=num+1
+    if guessing.Kate == True :
+        num=num+1
+    if guessing.Kayla == True :
+        num=num+1
+    if guessing.Mina == True :
+        num=num+1
+    if guessing.Sam == True :
+        num=num+1
+    if guessing.Will == True :
+        num=num+1
+    if guessing.Yumn == True :
+        num = num + 1
+    return num
 
 
 
