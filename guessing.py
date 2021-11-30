@@ -88,5 +88,6 @@ def guessChecker(list):
     if "Yumn" in list:
         global Yumn
         Yumn = False
+    print(Alex,Mina,Sam)
 
 

@@ -44,7 +44,6 @@ while run:
 
     window.fill((255, 255, 255))
     list1.draw(window)
-    pygame.display.update()
     window.blit(pygameSurface, pygameSurface.get_rect(center = (400, 400)))
     pygame.display.flip()
 
