@@ -21,7 +21,7 @@ Yumn = True
 fullBoard = ["Alex", "Aneesh", "Annabel", "Dashiell", "Ellie", "Evie", "Grant", "Hudson", "Jack", "Jonas", "Kate", "Kayla", "Mina", "Sam", "Will", "Yumn"]
 girls = ["Evie","Ellie","Annabel","Kate","Kayla","Mina"]
 boys = ["Alex", "Aneesh", "Dashiell", "Grant", "Hudson", "Jack", "Jonas", "Sam", "Will", "Yumn"]
-red = ["Hudson", "Dashiell", "Annabel", "Jonas"]
+red = ["Hudson", "Dashiell", "Annabel"]
 blue = ["Grant", "Aneesh", "Will"]
 black = ["Alex", "Ellie", "Kate"]
 grey = ["Jack"]
@@ -29,14 +29,16 @@ tan = ["Sam"]
 white = ["Evie"]
 purple = ["Mina"]
 mint = ["Kayla", "Yumn"]
+plaid = ["Jonas"]
 noTeeth = ["Sam", "Will"]
 teeth = ["Alex", "Aneesh", "Annabel", "Dashiell", "Ellie", "Evie", "Grant", "Hudson", "Jack", "Jonas", "Kate", "Kayla", "Mina", "Yumn"]
 brownHair = ["Jack", "Hudson", "Dashiell", "Alex", "Grant", "Evie", "Mina", "Ellie", "Will", "Jonas"]
 blackHair = ["Annabel", "Aneesh", "Yumn"]
 blondeHair = ["Kate", "Kayla", "Sam"]
 curlyHair = ["Evie", "Mina", "Yumn"]
-
-
+straightHair = ["Alex", "Aneesh", "Annabel", "Dashiell", "Ellie", "Grant", "Hudson", "Jack", "Jonas", "Kate", "Kayla", "Sam", "Will"]
+shortHair = ["Alex", "Aneesh", "Grant", "Hudson", "Jack", "Jonas", "Sam", "Will", "Yumn"]
+longHair = ["Evie","Ellie","Annabel", "Dashiell", "Kate","Kayla","Mina"]
 
 
 def guessChecker(list):
@@ -88,5 +90,4 @@ def guessChecker(list):
     if "Yumn" in list:
         global Yumn
         Yumn = False
-
 
